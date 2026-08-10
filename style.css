@@ -14,6 +14,13 @@ a{
 .amazon-logo{
     padding-left: 15px;
     padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.amazon-logo :hover{
+    cursor: pointer;
+    border: 1px solid white;
 }
 nav{
     background-color: black;
@@ -21,6 +28,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     height: 60px;
+     position: relative;
 }
 
 .delivery-location{
@@ -29,6 +37,11 @@ nav{
     align-items: end;
     font-size: 12px;
     margin-left: 12px;
+    padding: 5px;
+}
+.delivery-location:hover{
+    cursor: pointer;
+    border: 1px solid white;
 }
 
 .delivery-location strong{
@@ -86,6 +99,11 @@ nav{
     display: flex;
     align-items: center;
     font-size: 14px;
+    padding: 10px 5px 3px 5px;
+}
+.nav-language:hover{
+    cursor: pointer;
+    border: 1px solid white;
 }
 .nav-signin{
     color: white;
@@ -93,9 +111,41 @@ nav{
     align-items: end;
     margin-left: 15px;
     font-size: 14px;
+    padding: 5px;
+    height: 40px;
+}
+.nav-signin:hover .account-dropdown{
+    display: block;
+}
+.nav-signin:hover{
+cursor: pointer;
+    border: 1px solid white;
+}
+.account-dropdown:hover{
+    display: block;
 }
 .nav-account strong, .nav-orders strong{
     font-size: 15px;
+}
+.account-dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    width: 300px;
+    background-color: white;
+    color: #333;
+    padding: 20px;
+    z-index: 1000;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.dropdown-content{
+    display: flex;
+
+}
+.account-dropdown button{
+    align-items: center;
 }
 .nav-orders{
     color: white;
@@ -103,6 +153,11 @@ nav{
     flex-direction: column;
     font-size: 13px;
     margin-left: 15px;
+    padding: 5px;
+}
+.nav-orders:hover{
+    cursor: pointer;
+    border: 1px solid white;
 }
 .nav-cart{
     background-color: transparent;
@@ -111,6 +166,11 @@ nav{
     margin-left: 15px;
     font-weight: 700;
     padding-right: 10px;
+    padding: 5px;
+}
+.nav-cart:hover{
+    cursor: pointer;
+    border: 1px solid white;
 }
 .nav-bottom {
     height: 30px;
