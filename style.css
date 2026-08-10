@@ -5,7 +5,7 @@
     font-family:outfit ;
 }
 body{
-    background-color: #dadada;
+    background-color: #E3E6E6;
 }
 a{
     text-decoration: none;
@@ -30,7 +30,6 @@ nav{
     height: 60px;
      position: relative;
 }
-
 .delivery-location{
     color: #c4c4c4;
     display: flex;
@@ -43,7 +42,6 @@ nav{
     cursor: pointer;
     border: 1px solid white;
 }
-
 .delivery-location strong{
     color: white;
     font-size: 14px;
@@ -89,7 +87,6 @@ nav{
     justify-content: center;
     cursor: pointer;
 }
-
 .nav-search-button img {
     width: 22px;
 }
@@ -99,7 +96,7 @@ nav{
     display: flex;
     align-items: center;
     font-size: 14px;
-    padding: 10px 5px 3px 5px;
+    padding: 10px 0 3px 0;
 }
 .nav-language:hover{
     cursor: pointer;
@@ -142,7 +139,6 @@ cursor: pointer;
 }
 .dropdown-content{
     display: flex;
-
 }
 .account-dropdown button{
     align-items: center;
@@ -173,12 +169,12 @@ cursor: pointer;
     border: 1px solid white;
 }
 .nav-bottom {
-    height: 30px;
+    height: 32px;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 17px;
     justify-content: flex-start;
-    padding: 5px 0 5px 15px;
+    padding: 5px 0 5px 20px;
     background-color: #232f3e;
     color: white;
     font-size: 14px;
@@ -189,4 +185,39 @@ cursor: pointer;
     align-items: center;
     gap: 7px;
     font-size: 15px;
+}
+.sliders{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.slides{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slides img{
+    width: 100%;
+    flex-shrink: 0;
+    display: block;
+}
+.slider-btn {
+    position: absolute;
+    top: 15%;
+    width: 50px;
+    height: 100px;
+    background: transparent;
+    border: none;
+    color: black;
+    font-size: 40px;
+    cursor: pointer;
+}
+.slider-btn img{
+    width: 50px;
+    height: 80px;
+}
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
 }
