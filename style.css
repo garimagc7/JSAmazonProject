@@ -28,7 +28,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     height: 60px;
-     position: relative;
+    position: relative;
 }
 .delivery-location{
     color: #c4c4c4;
@@ -221,3 +221,39 @@ cursor: pointer;
 .next {
     right: 10px;
 }
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin: -250px 30px 0;
+    position: relative;
+    z-index: 2;
+}
+.product-grid strong{
+    font-size: 22px;
+}
+.product-grid p{
+    font-size: 14px;
+color: rgb(67, 117, 101);
+}
+.product-card{
+    min-width: 0;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.product-picture{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 20px;
+}
+.product-picture p{
+    color: #333;
+}
+.product-card img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
