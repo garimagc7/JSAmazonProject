@@ -277,4 +277,23 @@ cursor: pointer;
 .second-grid{
     margin: 30px;
 }
+.product-slider{
+    background-color: #fff;
+    margin: 0 30px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.products{
+    display: flex;
+    gap:20px;
+    overflow-x: auto;
+    margin-top: 15px;
+}
+.products img{
+    max-height: 200px;
+    max-width: 200px;
+}
+.product-slider .products::-webkit-scrollbar{
+    display: none;
+}
 
