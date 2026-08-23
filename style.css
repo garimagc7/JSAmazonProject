@@ -296,4 +296,32 @@ cursor: pointer;
 .product-slider .products::-webkit-scrollbar{
     display: none;
 }
+.footer-top{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    align-items: center;
+    padding: 30px;
+    gap: 5px;
+}
+.footer-top h2{
+    font-weight: 590;
+}
+.footer-top button{
+    padding: 7px 70px;
+    font-size: 15px;
+    line-height: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #fdc479;
+}
+.footer-top p{
+    font-size: small;
+}
+.footer-top a{
+    color: rgb(24, 124, 223);
+    text-decoration: underline;
+    pointer: cursor;
+}
 
