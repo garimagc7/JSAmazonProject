@@ -43,3 +43,11 @@ function prevSlide() {
 }
 document.querySelector('.next').addEventListener('click', nextSlide);
 document.querySelector('.prev').addEventListener('click', prevSlide);
+
+let scrollBar = document.querySelector('.product-slider');
+for( const item of scrollBar){
+    item.addEventListener('wheel', (evt)=> {
+        evt.preventDefault();
+        item.scrollLeft += deltaY;
+    });
+}
