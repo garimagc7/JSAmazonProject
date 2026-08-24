@@ -321,7 +321,7 @@ cursor: pointer;
 .footer-top a{
     color: rgb(24, 124, 223);
     text-decoration: underline;
-    pointer: cursor;
+    cursor: pointer;
 }
 footer {
   background-color: #232f3e;
