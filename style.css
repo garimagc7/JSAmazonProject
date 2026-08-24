@@ -300,10 +300,9 @@ cursor: pointer;
     background-color: white;
     display: flex;
     flex-direction: column;
-    margin: 30px;
     align-items: center;
     padding: 30px;
-    gap: 5px;
+    gap: 10px;
 }
 .footer-top h2{
     font-weight: 590;
@@ -314,7 +313,7 @@ cursor: pointer;
     line-height: 20px;
     border-radius: 10px;
     border: none;
-    background-color: #fdc479;
+    background-color: #f9cd94;
 }
 .footer-top p{
     font-size: small;
@@ -324,4 +323,53 @@ cursor: pointer;
     text-decoration: underline;
     pointer: cursor;
 }
-
+footer {
+  background-color: #232f3e;
+  color: white;
+}
+.back-to-top {
+  background-color: #37475a;
+  text-align: center;
+  padding: 15px;
+}
+.footer-links {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px 8%;
+  font-size: 15px;
+}
+.footer-links div {
+  width: 20%;
+}
+.footer-links h3 {
+  margin-bottom: 10px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.footer-links a {
+  display: block;
+  margin-bottom: 8px;
+  color: #ddd;
+  cursor: pointer;
+}
+.footer-bottom {
+  border-top: 1px solid #3a4553;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 25px;
+}
+.footer-bottom img {
+  width: 100px;
+  margin-right: 100px;
+  cursor: pointer;
+}
+.footer-bottom button {
+  background: transparent;
+  color: #ddd;
+  border: 1px solid #8795a5;
+  padding: 8px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+}
