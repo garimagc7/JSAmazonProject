@@ -289,7 +289,17 @@ cursor: pointer;
     overflow-x: auto;
     margin-top: 15px;
 }
-.product img{
+.products a {
+    display: block;
+}
+.products img {
+    max-width: 300px;
+    max-height: 240px;
+    width: auto;
+    height: auto;
+    display: block;
+}
+.products img{
     max-height: 200px;
     max-width: 200px;
 }
