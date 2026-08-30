@@ -5,13 +5,142 @@
     font-family: outfit;
 }
 body{
-    color: #fff;
+    color: white;
+}
+.breadcrumb {
+    font-size: 13px;
+    color: #555;
+    padding: 15px 25px;
 }
 .product-display{
     min-height: 100%;
     padding: 10px 20px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 560px minmax(500px, 1fr) 330px;
+    gap:25px;
+    padding:  10px 25px;
 }
 .d-details{
     display: flex;
 }
+.product-image{
+    display: flex;
+    gap: 25px;
+}
+.product-icons{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.product-icons img{
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    border: 1px solid #aaa;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.product-icons img:hover{
+    border: 2px solid #007185;
+}
+.main-image{
+    width: 450px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.product-details h1 {
+    font-size: 27px;
+    line-height: 1.25;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.store {
+    color: #007185;
+    margin-bottom: 8px;
+}
+.store span {
+    color: #007185;
+}
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+.stars {
+    color: #f08804;
+    font-size: 19px;
+}
+.rating a {
+    color: #007185;
+    text-decoration: none;
+}
+.best-seller {
+    display: inline-block;
+    background: #e47911;
+    color: white;
+    padding: 5px 8px;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.category {
+    display: inline-block;
+    color: #007185;
+    margin-left: 5px;
+}
+.bought {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.product-details hr {
+    margin: 15px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.discount {
+    color: #cc4b00;
+    font-size: 27px;
+}
+.amount {
+    font-size: 30px;
+}
+.amount sup {
+    font-size: 16px;
+}
+.list-price {
+    color: #555;
+    font-size: 14px;
+    margin: 5px 0;
+}
+.shipping {
+    margin-top: 10px;
+}
+.shipping strong {
+    color: #007185;
+}
+.returns {
+    color: #007185;
+    margin: 8px 0;
+}
+.prime {
+    color: #007185;
+}
+.other-price {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
