@@ -1,6 +1,6 @@
 let products = [
     {
-        id: P001,
+        id: "P001",
         image: "assets/Lunch_Box.png",
         colors: "+52 other colors/patterns",
         name: "Simple Kids Lunch Box",
@@ -9,7 +9,7 @@ let products = [
         reviews: "8,245",
         priceCents: 1999
     },{
-         id: P002,
+        id: "P002",
         image: "assets/Art_Supplies.png",
         colors: "+5 other colors/patterns",
         name: "Kids Art/Paint Brush",
@@ -18,7 +18,7 @@ let products = [
         reviews: "12,430",
         priceCents: 2411
     },{
-         id: P003,
+        id: "P003",
         image: "assets/Clothes.png",
         colors: "+12 other colors/patterns",
         name: "Kids Casual Clothing Set",
@@ -27,7 +27,7 @@ let products = [
         reviews: "9,821",
         priceCents: 2199
     },{
-         id: P004,
+        id: "P004",
         image: "assets/product-picture1.png",
         colors: "+10 other colors/patterns",
         name: "School Backpack for Kids",
@@ -36,7 +36,7 @@ let products = [
         reviews: "4,285",
         priceCents: 2905
     }, {
-         id: P005,
+        id: "P005",
         image: "assets/WaterBottle.png",
         colors: "+18 other colors/patterns",
         name: "Stainless Steel Water Bottle for Students",
@@ -45,7 +45,7 @@ let products = [
         reviews: "6,842",
         priceCents: 1616
     }, {
-         id: P006,
+        id: "P006",
         image: "assets/FilesNFolder.png",
         colors: "+8 other colors/patterns",
         name: "School Files and Folders Set",
