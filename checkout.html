@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/checkout.css">
+</head>
+<body>
+    <header class="checkout-header">
+        <div class="checkout-header-content">
+            <div class="checkout-header-left">
+                <a href="index.html">
+                    <img
+                        class="checkout-logo"
+                        src="assets/amazon_logo.png"
+                        alt="Amazon"
+                    >
+                </a>
+            </div>
+            <div class="checkout-header-middle">
+                Checkout
+                <span>
+                    (
+                    <a href="product.html" class="return-to-home-link">
+                        <span class="js-checkout-item-count">0</span>
+                        items
+                    </a>
+                    )
+                </span>
+            </div>
+            <div class="checkout-header-right">🔒</div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="page-title">
+            Review your order
+        </div>
+
+        <div class="checkout-grid">
+            <div class="order-summary js-order-summary">
+                <div class="cart-item-container">
+                <div class="delivery-date">
+                    Delivery date: Friday, September 19
+                </div>
+                <div class="cart-item-details-grid">
+                    <img
+                        class="product-image"
+                        src="assets/product-picture1.png"
+                    >
+                    <div class="cart-item-details">
+                        <div class="product-name"> School Backpack for Kids</div>
+                        <div class="product-price">$29.05</div>
+                        <div class="product-quantity">
+                            <span>
+                                Quantity:
+                                <span class="quantity-label">1</span>
+                            </span>
+                            <span class="update-quantity-link">
+                                Update
+                            </span>
+                            <span
+                                class="delete-quantity-link">
+                                Delete
+                            </span>
+                        </div>
+                    </div>
+                    <div class="delivery-options">
+                        <div class="delivery-options-title">
+                            Choose a delivery option:
+                        </div>
+                        <div class="delivery-option">
+                            <input
+                                type="radio"
+                                checked
+                                class="delivery-option-input"
+                            >
+                            <div>
+                                <div class="delivery-option-date">
+                                    Friday, September 19
+                                </div>
+                                <div class="delivery-option-price">
+                                    FREE Shipping
+                                </div>
+                            </div>
+                        </div>
+                        <div class="delivery-option">
+                            <input
+                                type="radio"
+                                class="delivery-option-input"
+                            >
+                            <div>
+                                <div class="delivery-option-date">
+                                    Wednesday, September 17
+                                </div>
+                                <div class="delivery-option-price">
+                                    $4.99 - Shipping
+                                </div>
+                            </div>
+                        </div>
+                        <div class="delivery-option">
+                            <input
+                                type="radio"
+                                class="delivery-option-input"
+                            >
+                            <div>
+                                <div class="delivery-option-date">
+                                    Monday, September 15
+                                </div>
+                                <div class="delivery-option-price">
+                                    $9.99 - Shipping
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="payment-summary">
+                <div class="payment-summary-title">
+                    Order Summary
+                </div>
+                <div class="payment-summary-row">
+                    <div>
+                        Items
+                        (<span class="js-item-count">0</span>):
+                    </div>
+                    <div class="payment-summary-money js-items-total">
+                        $0.00
+                    </div>
+                </div>
+                <div class="payment-summary-row">
+                    <div>
+                        Shipping &amp; handling:
+                    </div>
+                    <div class="payment-summary-money js-shipping-total">
+                        $0.00
+                    </div>
+                </div>
+                <div class="payment-summary-row subtotal-row">
+                    <div>
+                        Total before tax:
+                    </div>
+                    <div class="payment-summary-money js-total-before-tax">
+                        $0.00
+                    </div>
+                </div>
+                <div class="payment-summary-row">
+                    <div>
+                        Estimated tax (10%):
+                    </div>
+                    <div class="payment-summary-money js-tax">
+                        $0.00
+                    </div>
+                </div>
+                <div class="payment-summary-row total-row">
+                    <div>
+                        Order total:
+                    </div>
+                    <div class="payment-summary-money js-order-total">
+                        $0.00
+                    </div>
+                </div>
+                <button class="place-order-button">
+                    Place your order
+                </button>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="script/checkout.js"></script>
+
+</body>
+</html>
