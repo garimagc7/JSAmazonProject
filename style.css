@@ -156,13 +156,15 @@ cursor: pointer;
     border: 1px solid white;
 }
 .nav-cart{
+    display: flex;
+    align-items: end;
     background-color: transparent;
     color: white;
     border: none;
     margin-left: 15px;
     font-weight: 700;
-    padding-right: 10px;
     padding: 5px;
+    position: relative;
 }
 .nav-cart:hover{
     cursor: pointer;
@@ -179,6 +181,14 @@ cursor: pointer;
     color: white;
     font-size: 14px;
     font-weight: 450;
+}
+.cart-quantity {
+    position: absolute;
+    top: 0px;
+    left: 25px;
+    color: orange;
+    font-weight: bold;
+    font-size: 15px;
 }
 .all-menu {
     display: flex;

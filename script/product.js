@@ -7,10 +7,10 @@ products.forEach((product)=>{
                 <img src="${product.image}">
             </div>
             <p class="other-colors">${product.colors}</p>
-            <h2>${products.name}</h2>
+            <h2>${product.name}</h2>
             <p class="description">${product.description}</p>
             <div class="stars">
-                ${products.stars}<span>${product.reviews}</span>
+                ${product.stars}<span>${product.reviews}</span>
             </div>
             <p class="price">$${(product.priceCents/100).toFixed(2)}</p>
             <div class="quantity">
@@ -28,7 +28,7 @@ products.forEach((product)=>{
                 </select>
             </div>
             <button class="add-cart js-cart"
-            data-product-id=" ${product.id}"
+            data-product-id="${product.id}"
             >Add to cart</button>
         </div>
     `;
@@ -39,7 +39,14 @@ document.querySelector('.js-product-grid2').innerHTML = productsHtml;
 document.querySelectorAll('.js-cart')
   .forEach((button) => {
     button.addEventListener('click', () => {
+
       const productId = button.dataset.productId;
+
+      const product = button.closest('.result-product');
+
+      const quantitySelect = product.querySelector('select');
+
+      const quantity = Number(quantitySelect.value);
 
       let matchingItem;
 
@@ -50,12 +57,21 @@ document.querySelectorAll('.js-cart')
       });
 
       if (matchingItem) {
-        matchingItem.quantity += 1;
+        matchingItem.quantity += quantity;
       } else {
         cart.push({
           productId: productId,
-          quantity: 1
+          quantity: quantity
         });
       }
+
+      let cartQuantity = 0;
+
+      cart.forEach((item) => {
+        cartQuantity += item.quantity;
+      });
+
+      document.querySelector('.js-cart-quantity')
+        .innerHTML = cartQuantity;
     });
   });

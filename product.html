@@ -76,9 +76,11 @@
             <p>Returns<p>
            <strong>& Orders</strong>
         </div>
-        <button class="nav-cart">
-            <img width="32px" src="assets/cart_icon.png">Cart
-        </button>
+       <a class="nav-cart"">
+          <img width="45px" src="assets/cart-icon.png">
+          <div class="cart-quantity js-cart-quantity">0</div>
+          <div>Cart</div>
+        </a>
     </nav>
     <nav class="nav-bottom">
         <a href="#" class="all-menu">
@@ -95,6 +97,13 @@
 
     <div class="page-top">
         <p>1-8 of 38 results for <span>"Must-haves for every student"</span></p>
+        <select class="sort">
+            <option>Sort by: Featured</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Avg. Customer Review</option>
+        </select>
+
     </div>
     
     <div class="result-page">
@@ -118,22 +127,12 @@
         </aside>
         <div class="result-content">
             <div class="result-header">
-                <div>
-                    <h2>Results</h2>
-                    <p>
-                        Check each product page for other buying options.
-                        Price and other details may vary based on product
-                        size and color.
-                    </p>
-                </div>
-
-                <select class="sort">
-                    <option>Sort by: Featured</option>
-                    <option>Price: Low to High</option>
-                    <option>Price: High to Low</option>
-                    <option>Avg. Customer Review</option>
-                </select>
-
+                <h2>Results</h2>
+                <p>
+                    Check each product page for other buying options.
+                    Price and other details may vary based on product
+                    size and color.
+                </p>
             </div>
             <div class="product-grid2 js-product-grid2">
             </div>  
