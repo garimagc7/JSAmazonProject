@@ -1,4 +1,4 @@
-let products = [
+export let products = [
     {
         id: "P001",
         image: "assets/Lunch_Box.png",

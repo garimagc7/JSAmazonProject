@@ -329,6 +329,7 @@ cursor: pointer;
 }
 .footer-top h2{
     font-weight: 590;
+    color: black;
 }
 .footer-top button{
     padding: 7px 70px;
@@ -340,6 +341,7 @@ cursor: pointer;
 }
 .footer-top p{
     font-size: small;
+    color: black;
 }
 .footer-top a{
     color: rgb(24, 124, 223);
