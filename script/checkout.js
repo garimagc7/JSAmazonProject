@@ -1,4 +1,4 @@
-import {cart} from '../data/cart.js';
+import {cart, removeFromCart} from '../data/cart.js';
 import {products} from '../data/productData.js';
 
 let cartSummaryHtml = "";
@@ -16,7 +16,7 @@ cart.forEach((cartItem) => {
     });
 
     cartSummaryHtml+= `
-    <div class="cart-item-container ">
+    <div class="cart-item-container js-cart-item-container-${matchingProduct.id}">
                 <div class="delivery-date">
                     Delivery date: Friday, September 19
                 </div>
@@ -37,7 +37,8 @@ cart.forEach((cartItem) => {
                                 Update
                             </span>
                             <span
-                                class="delete-quantity-link">
+                                class="delete-quantity-link js-delete-link
+                                data-product-id="${matchingProduct.id}">
                                 Delete
                             </span>
                         </div>
@@ -100,3 +101,20 @@ cart.forEach((cartItem) => {
 }); 
 
 document.querySelector(".js-order-summary").innerHTML = cartSummaryHtml;
+
+document.querySelectorAll('.js-delete-link')
+    .forEach((link) => {
+
+        link.addEventListener('click', () => {
+
+            const productId = link.dataset.productId;
+
+            removeFromCart(productId);
+
+            const container = link.closest('.cart-item-container');
+
+            container.remove();
+
+        });
+
+    });

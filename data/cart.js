@@ -26,3 +26,14 @@ export const cart = [{
     });
     }
 }
+
+export function removeFromCart(productId) {
+
+    const index = cart.findIndex((cartItem) => {
+        return cartItem.productId === productId;
+    });
+
+    if (index !== -1) {
+        cart.splice(index, 1);
+    }
+}
