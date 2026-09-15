@@ -1,8 +1,8 @@
 export const cart = [{
-    productId: "p001",
+    productId: "P001",
     quantity: 1,
 }, {
-    productId: "p004",
+    productId: "P004",
     quantity: 1,
 }
 ];
