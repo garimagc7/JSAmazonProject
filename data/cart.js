@@ -1,13 +1,20 @@
-export const cart = [{
+export let cart = JSON.parse(localStorage.getItem('cart'));
+
+if(!cart){
+    cart =[{
     productId: "P001",
     quantity: 1,
 }, {
     productId: "P004",
     quantity: 1,
+}];
 }
-];
 
- export function addToCart(productId,quantity){
+function saveToStorage(){
+    localStorage.setItem('cart',JSON.stringify(cart));
+}
+
+export function addToCart(productId,quantity){
 
   let matchingItem;
 
@@ -25,6 +32,7 @@ export const cart = [{
         quantity: quantity
     });
     }
+    saveToStorage();
 }
 
 export function removeFromCart(productId) {
@@ -36,4 +44,5 @@ export function removeFromCart(productId) {
     if (index !== -1) {
         cart.splice(index, 1);
     }
+    saveToStorage();
 }

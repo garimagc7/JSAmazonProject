@@ -67,3 +67,5 @@ document.querySelectorAll('.js-cart')
       updateCartQuantity();
     });
   });
+
+  updateCartQuantity();
