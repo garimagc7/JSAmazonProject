@@ -53,6 +53,7 @@ cart.forEach((cartItem) => {
                                 checked
                                 class="delivery-option-input"
                                 name="delivery-option-${matchingProduct.id}"
+                                data-shipping-cost="0"
                             >
                             <div>
                                 <div class="delivery-option-date">
@@ -68,6 +69,7 @@ cart.forEach((cartItem) => {
                                 type="radio"
                                 class="delivery-option-input"
                                 name="delivery-option-${matchingProduct.id}"
+                                data-shipping-cost="4.99"
                             >
                             <div>
                                 <div class="delivery-option-date">
@@ -83,6 +85,7 @@ cart.forEach((cartItem) => {
                                 type="radio"
                                 class="delivery-option-input"
                                 name="delivery-option-${matchingProduct.id}"
+                                data-shipping-cost="9.99"
                             >
                             <div>
                                 <div class="delivery-option-date">
@@ -109,6 +112,8 @@ function updateCartQuantity(){
   cart.forEach((item) => {
     cartQuantity += item.quantity;
   });
+
+  document.querySelector('.js-item-count').innerHTML = cartQuantity;
   document.querySelector(".js-checkout-item-count").innerHTML = cartQuantity;
 }
 updateCartQuantity();
@@ -127,3 +132,57 @@ document.querySelectorAll('.js-delete-link')
         });
     });
 
+function updateOrderSummary() {
+
+    let cartQuantity = 0;
+    let itemsTotalCents = 0;
+    let shippingTotalCents = 0;
+
+    cart.forEach((cartItem) => {
+
+        cartQuantity += cartItem.quantity;
+
+        products.forEach((product) => {
+
+            if(product.id === cartItem.productId) {
+                itemsTotalCents +=
+                    product.priceCents * cartItem.quantity;
+            }
+        });
+    });
+    
+    document.querySelectorAll('.delivery-option-input')
+    .forEach((radio) => {
+        if(radio.checked) {
+            shippingTotalCents +=
+                Number(radio.dataset.shippingCost) * 100;
+        }
+    });
+
+    const totalBeforeTaxCents = itemsTotalCents + shippingTotalCents;
+
+    const taxCents = totalBeforeTaxCents * 0.10;
+
+    const orderTotalCents = totalBeforeTaxCents + taxCents;
+
+    document.querySelector('.js-item-count').innerHTML = cartQuantity;
+
+    document.querySelector('.js-items-total').innerHTML =`$${(itemsTotalCents / 100).toFixed(2)}`;
+
+    document.querySelector('.js-shipping-total').innerHTML = `$${(shippingTotalCents / 100).toFixed(2)}`;
+
+    document.querySelector('.js-total-before-tax').innerHTML = `$${(totalBeforeTaxCents / 100).toFixed(2)}`;
+
+    document.querySelector('.js-tax').innerHTML = `$${(taxCents / 100).toFixed(2)}`;
+
+    document.querySelector('.js-order-total').innerHTML = `$${(orderTotalCents / 100).toFixed(2)}`;
+}
+
+document.querySelectorAll('.delivery-option-input')
+    .forEach((radio) => {
+        radio.addEventListener('change', () => {
+            updateOrderSummary();
+        });
+    });
+
+updateOrderSummary();
