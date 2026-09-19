@@ -109,10 +109,9 @@ function updateCartQuantity(){
   cart.forEach((item) => {
     cartQuantity += item.quantity;
   });
-
-  document.querySelector('.js-cart-quantity')
-    .innerHTML = cartQuantity;
+  document.querySelector(".js-checkout-item-count").innerHTML = cartQuantity;
 }
+updateCartQuantity();
 
 document.querySelectorAll('.js-delete-link')
     .forEach((link) => {
@@ -127,3 +126,4 @@ document.querySelectorAll('.js-delete-link')
             container.remove();
         });
     });
+
