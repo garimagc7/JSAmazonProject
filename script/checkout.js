@@ -72,8 +72,8 @@ cart.forEach((cartItem) => {
                                 class="delivery-option-input"
                                 name="delivery-option-${matchingProduct.id}"
                                 data-shipping-cost="4.99"
-                                data-delivery-option="Wenesday"
-                                data-delivery-date="Wenesday, September 17"
+                                data-delivery-option="Wednesday"
+                                data-delivery-date="Wednesday, September 17"
                             >
                             <div>
                                 <div class="delivery-option-date">
@@ -152,6 +152,8 @@ document.querySelectorAll('.js-delete-link')
             const container = link.closest('.cart-item-container');
 
             container.remove();
+            updateCartQuantity();
+            updateOrderSummary();
         });
     });
 
