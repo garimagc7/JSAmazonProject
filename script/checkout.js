@@ -17,7 +17,7 @@ cart.forEach((cartItem) => {
 
     cartSummaryHtml+= `
     <div class="cart-item-container js-cart-item-container-${matchingProduct.id}">
-                <div class="delivery-date">
+                <div class="delivery-date js-delivery-date">
                     Delivery date: Friday, September 19
                 </div>
                 <div class="cart-item-details-grid">
@@ -54,6 +54,8 @@ cart.forEach((cartItem) => {
                                 class="delivery-option-input"
                                 name="delivery-option-${matchingProduct.id}"
                                 data-shipping-cost="0"
+                                data-delivery-option="friday"
+                                data-delivery-date="Friday, September 19"
                             >
                             <div>
                                 <div class="delivery-option-date">
@@ -70,6 +72,8 @@ cart.forEach((cartItem) => {
                                 class="delivery-option-input"
                                 name="delivery-option-${matchingProduct.id}"
                                 data-shipping-cost="4.99"
+                                data-delivery-option="Wenesday"
+                                data-delivery-date="Wenesday, September 17"
                             >
                             <div>
                                 <div class="delivery-option-date">
@@ -86,6 +90,8 @@ cart.forEach((cartItem) => {
                                 class="delivery-option-input"
                                 name="delivery-option-${matchingProduct.id}"
                                 data-shipping-cost="9.99"
+                                data-delivery-option="Monday"
+                                data-delivery-date="Monday, September 15"
                             >
                             <div>
                                 <div class="delivery-option-date">
@@ -105,6 +111,23 @@ cart.forEach((cartItem) => {
 
 document.querySelector(".js-order-summary").innerHTML = cartSummaryHtml;
 
+document.querySelectorAll('.delivery-option-input')
+    .forEach((radio) => {
+
+        const productId =
+            radio.name.replace('delivery-option-', '');
+
+        const savedOption =
+            localStorage.getItem(`delivery-option-${productId}`);
+
+        if(savedOption === radio.dataset.deliveryOption) {
+            radio.checked = true;
+            const container = radio.closest('.cart-item-container');
+
+           container.querySelector('.js-delivery-date').innerHTML =
+                `Delivery date: ${radio.dataset.deliveryDate}`;
+        }
+});
 
 function updateCartQuantity(){
   let cartQuantity = 0;
@@ -180,9 +203,24 @@ function updateOrderSummary() {
 
 document.querySelectorAll('.delivery-option-input')
     .forEach((radio) => {
+
         radio.addEventListener('change', () => {
+
+            const productId = radio.name.replace('delivery-option-', '');
+
+            localStorage.setItem(
+                `delivery-option-${productId}`,
+                radio.dataset.deliveryOption
+            );
+
+            const container = radio.closest('.cart-item-container');
+
+            container.querySelector('.js-delivery-date').innerHTML =
+                `Delivery date: ${radio.dataset.deliveryDate}`;
+
             updateOrderSummary();
         });
-    });
+
+ });
 
 updateOrderSummary();
