@@ -6,6 +6,15 @@
     color: white;
 }
 
+.project-disclaimer {
+    background: #fff3cd;
+    color: #664d03;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
 .checkout-header-content {
     width: 100%;
     max-width: 1200px;
